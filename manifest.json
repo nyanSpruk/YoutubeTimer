@@ -6,9 +6,15 @@
     "host_permissions": [
         "https://*.youtube.com/watch?*"
     ],
+    "permissions": [
+        "storage"
+    ],
     "action": {
         "default_title": "Youtube Time Tracker",
         "default_popup": "./html/popup.html"
+    },
+    "background": {
+        "service_worker": "./javascript/background.js"
     },
     "content_scripts": [
         {
