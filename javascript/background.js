@@ -1,6 +1,7 @@
 chrome.storage.local.get(['YoutubeTimeTracker'], function (result) {
     // TODO if timestamp is different (day) then clear storage to 0
-
+    // TODO change from seconds to hours and minutes and seconds
+    // TODO: Add a button to stop saving and tracking
     let currentValue = undefined;
     let currentTimeStamp;
 
@@ -25,6 +26,7 @@ chrome.storage.local.get(['YoutubeTimeTracker'], function (result) {
             if (currentValue === 1) {
                 totalTimeSpent += parseFloat(calculateTime(request.timeStamp));
                 let timeInSeconds = millisecondsToSeconds(totalTimeSpent);
+                let hoursMinutesSeconds = [0, 0, 0];
                 chrome.storage.local.set({ YoutubeTimeTracker: timeInSeconds }, () => console.log("Set"));
             }
             currentValue = request.status;
