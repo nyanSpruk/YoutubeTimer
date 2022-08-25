@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Youtube Time Tracker",
     "description": "Tracks time spent watching youtube videos.",
     "version": "1.0",
@@ -9,7 +9,8 @@
                 "https://www.youtube.com/watch?*"
             ],
             "js": [
-                "./external/jquery-3.6.0.min.js"
+                "./external/jquery-3.6.0.min.js",
+                "./javascript/tracker.js"
             ]
         }
     ]
