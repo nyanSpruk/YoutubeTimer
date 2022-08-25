@@ -3,10 +3,17 @@
     "name": "Youtube Time Tracker",
     "description": "Tracks time spent watching youtube videos.",
     "version": "1.0",
+    "host_permissions": [
+        "https://*.youtube.com/watch?*"
+    ],
+    "action": {
+        "default_title": "Youtube Time Tracker",
+        "default_popup": "./html/popup.html"
+    },
     "content_scripts": [
         {
             "matches": [
-                "https://www.youtube.com/watch?*"
+                "https://*.youtube.com/watch?*"
             ],
             "js": [
                 "./external/jquery-3.6.0.min.js",
